@@ -8,6 +8,10 @@
 
 #import "EditLayer.h"
 
+@interface EditLayer()
+- (void)createPolygonSprite:(CGPoint)start end:(CGPoint)end;
+@end
+
 // enums that will be used as tags
 enum {
   kTagTileMap = 1,
@@ -36,8 +40,7 @@ enum {
     // enable accelerometer
     self.isAccelerometerEnabled = YES;
     
-    CGSize screenSize = [CCDirector sharedDirector].winSize;
-    CCLOG(@"Screen width %0.2f screen height %0.2f",screenSize.width,screenSize.height);
+    CGSize screenSize = [CCDirector sharedDirector].screenSize;
     
     // Define the gravity vector.
     self.gravity = ccp(0.0f, -320.0f);
@@ -46,20 +49,10 @@ enum {
     self.velocityIterations = 8;
     self.positionIterations = 1;
     
-    // Define the ground box.
-    CCBodySprite* ground = [CCBodySprite node];
-    ground.physicsType = kStatic;
-    ground.collisionType = kWallCollisionType;
-    ground.collidesWithType = kBoxCollisionType;
-    [self addChild:ground];
-    
-    // Define the ground box shape.
-    CCArray* bottom = [CCArray arrayWithCapacity:4];
-    [bottom addObject:[NSValue valueWithCGPoint:ccp(0, 0)]];
-    [bottom addObject:[NSValue valueWithCGPoint:ccp(screenSize.width, 0)]];
-    [bottom addObject:[NSValue valueWithCGPoint:ccp(screenSize.width, 20)]];
-    [bottom addObject:[NSValue valueWithCGPoint:ccp(0, 20)]];
-    [ground addPolygonWithName:@"bottom" withVertices:bottom];
+    [self createPolygonSprite:ccp(0, 0) end:ccp(screenSize.width, 20)];
+    [self createPolygonSprite:ccp(0, screenSize.height - 20) end:ccp(screenSize.width, screenSize.height)];
+    [self createPolygonSprite:ccp(0, 0) end:ccp(20, screenSize.height)];
+    [self createPolygonSprite:ccp(screenSize.width - 20, 0) end:ccp(screenSize.width, screenSize.height)];
     
     // Set up sprite
     _lastBox = nil;
@@ -68,11 +61,6 @@ enum {
     [self addChild:batch z:0 tag:kTagBatchNode];
     
     [self addNewSpriteWithCoords:ccp(screenSize.width/2, screenSize.height/2)];
-    
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
-    [self addChild:label z:0];
-    [label setColor:ccc3(0,0,255)];
-    label.position = ccp( screenSize.width/2, screenSize.height-50);
   }
   return self;
 }
@@ -119,6 +107,21 @@ enum {
   _lastBox = sprite;
 }
 
+- (void)createPolygonSprite:(CGPoint)start end:(CGPoint)end {
+  // Define the ground box shape.
+  CCBodySprite* wall = [CCBodySprite node];
+  wall.physicsType = kStatic;
+  wall.collisionType = kWallCollisionType;
+  wall.collidesWithType = kBoxCollisionType;
+  [self addChild:wall];
+  CCArray* bottom = [CCArray arrayWithCapacity:4];
+  [bottom addObject:[NSValue valueWithCGPoint:start]];
+  [bottom addObject:[NSValue valueWithCGPoint:ccp(end.x, start.y)]];
+  [bottom addObject:[NSValue valueWithCGPoint:ccp(end.x, end.y)]];
+  [bottom addObject:[NSValue valueWithCGPoint:ccp(start.x, end.y)]];
+  [wall addPolygonWithName:@"bottom" withVertices:bottom];
+}
+
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
   //Add a new body/atlas sprite at the touched location
@@ -147,41 +150,6 @@ enum {
   // accelerometer values are in "Portrait" mode. Change them to Landscape left
   // multiply the gravity by 10
   [self setGravity:CGPointMake(-accelY * 320, accelX * 320)];
-}
-
-// on "dealloc" you need to release all your retained objects
-- (void) dealloc
-{
-  // in case you have something to dealloc, do it in this method
-  
-  // don't forget to call "super dealloc"
-}
-
--(void) onOverlapBody:(CCBodySprite *)sprite1 andBody:(CCBodySprite *)sprite2
-{
-  // check if two boxes have started to overlap
-  if (sprite1.collisionType == kBoxCollisionType && sprite2.collisionType == kBoxCollisionType) {
-    
-    //CCLOG(@"Two boxes have overlapped. Cool.");
-  }
-}
-
--(void) onSeparateBody:(CCBodySprite *)sprite1 andBody:(CCBodySprite *)sprite2
-{
-  // check if two boxes are no longer overlapping
-  if (sprite1.collisionType == kBoxCollisionType && sprite2.collisionType == kBoxCollisionType) {
-    
-    //CCLOG(@"Two boxes stopped overlapping. That's okay too.");
-  }
-}
-
--(void) onCollideBody:(CCBodySprite *)sprite1 andBody:(CCBodySprite *)sprite2 withForce:(float)force withFrictionForce:(float)frictionForce
-{
-  // check if two boxes have collided in the last update
-  if (sprite1.collisionType == kBoxCollisionType && sprite2.collisionType == kBoxCollisionType) {
-    
-    //CCLOG(@"Two boxes have collided, yay!");
-  }
 }
 
 @end
