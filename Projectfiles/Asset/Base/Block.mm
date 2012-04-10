@@ -10,4 +10,12 @@
 
 @implementation Block
 
+- (id)initWithDictionary:(NSDictionary *)info {
+  self = [super initWithDictionary:info];
+  if (self) {
+    self.physicsType = kStatic;
+  }
+  return self;
+}
+
 @end

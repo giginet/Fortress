@@ -7,6 +7,7 @@
 //
 
 #import "MainLayer.h"
+#import "AssetManager.h"
 #import "Block.h"
 
 @implementation MainLayer
@@ -18,6 +19,9 @@
     self.positionIterations = 1;
     self.gravity = ccp(0, -9.8);
     
+    Asset* block = [[AssetManager sharedManager] createAssetWithID:1];
+    block.position = ccp(100, 100);
+    [self addChild:block];
   }
   return self;
 }

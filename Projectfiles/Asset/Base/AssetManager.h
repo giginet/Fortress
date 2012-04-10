@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Asset.h"
 
 /*
  設定ファイルなどからAssetの情報を読み込んでAssetを生成するクラスです
  */
 
-@interface AssetManager : NSObject
+@interface AssetManager : NSObject {
+  NSDictionary* assetInfo_;
+}
+
++ (id)sharedManager;
+- (Asset*)createAssetWithID:(NSUInteger)assetId;
 
 @end

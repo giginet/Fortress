@@ -26,13 +26,20 @@
 }
 
 - (id)initWithDictionary:(NSDictionary *)info {
-  self = [self init];
+  NSString* filename = [info objectForKey:@"graphic"];
+  self = [self initWithFile:filename];
   if (self) {
+    [self setTexture:[[CCTextureCache sharedTextureCache] addImage:filename]];
+    maxHp = [[info objectForKey:@"hp"] intValue];
+    hp = maxHp;
+    cost = [[info objectForKey:@"cost"] intValue];
+    name = [info objectForKey:@"name"];
   }
   return self;
 }
 
 - (void)damage:(int)damage attacker:(CCBodySprite *)attacker {
+  self.hp -= damage;
 }
 
 @end
