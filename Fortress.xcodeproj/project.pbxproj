@@ -32,6 +32,8 @@
 		07E10A4B153320AB0059EF9B /* CCMotorSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A45153320AB0059EF9B /* CCMotorSprite.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07E10A4C153320AB0059EF9B /* CCSpringSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A47153320AB0059EF9B /* CCSpringSprite.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07E10A4D153320AB0059EF9B /* CCWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A49153320AB0059EF9B /* CCWorldLayer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07E10A50153324070059EF9B /* EditLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A4F153324070059EF9B /* EditLayer.mm */; };
+		07E10A52153329A10059EF9B /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A51153329A10059EF9B /* blocks.png */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -117,6 +119,9 @@
 		07E10A47153320AB0059EF9B /* CCSpringSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSpringSprite.mm; sourceTree = "<group>"; };
 		07E10A48153320AB0059EF9B /* CCWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCWorldLayer.h; sourceTree = "<group>"; };
 		07E10A49153320AB0059EF9B /* CCWorldLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCWorldLayer.mm; sourceTree = "<group>"; };
+		07E10A4E153324070059EF9B /* EditLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditLayer.h; sourceTree = "<group>"; };
+		07E10A4F153324070059EF9B /* EditLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EditLayer.mm; sourceTree = "<group>"; };
+		07E10A51153329A10059EF9B /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blocks.png; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -193,6 +198,8 @@
 		07DF6B88153316B400D00FCD /* Layer */ = {
 			isa = PBXGroup;
 			children = (
+				07E10A4E153324070059EF9B /* EditLayer.h */,
+				07E10A4F153324070059EF9B /* EditLayer.mm */,
 			);
 			name = Layer;
 			sourceTree = "<group>";
@@ -332,6 +339,7 @@
 			children = (
 				DC193EBF13B6969B00500B56 /* Author&License.txt */,
 				DC193EC013B6969B00500B56 /* dg_grounds32.png */,
+				07E10A51153329A10059EF9B /* blocks.png */,
 			);
 			path = "David Gervais Tilesets";
 			sourceTree = "<group>";
@@ -535,6 +543,7 @@
 				DCC1A3AF13A94F1A005BD75D /* config.lua in Resources */,
 				DC193EC113B6969B00500B56 /* Author&License.txt in Resources */,
 				DC193EC313B6969B00500B56 /* dg_grounds32.png in Resources */,
+				07E10A52153329A10059EF9B /* blocks.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +585,7 @@
 				07E10A4B153320AB0059EF9B /* CCMotorSprite.mm in Sources */,
 				07E10A4C153320AB0059EF9B /* CCSpringSprite.mm in Sources */,
 				07E10A4D153320AB0059EF9B /* CCWorldLayer.mm in Sources */,
+				07E10A50153324070059EF9B /* EditLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
