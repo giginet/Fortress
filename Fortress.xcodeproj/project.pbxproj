@@ -34,10 +34,11 @@
 		07E10A4D153320AB0059EF9B /* CCWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A49153320AB0059EF9B /* CCWorldLayer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07E10A50153324070059EF9B /* EditLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A4F153324070059EF9B /* EditLayer.mm */; };
 		07E10A52153329A10059EF9B /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A51153329A10059EF9B /* blocks.png */; };
-		07E10A55153478950059EF9B /* Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A54153478950059EF9B /* Asset.m */; };
-		07E10A58153478F80059EF9B /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A57153478F80059EF9B /* Block.m */; };
-		07E10A5B153479100059EF9B /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5A153479100059EF9B /* Character.m */; };
-		07E10A5E15347A830059EF9B /* AssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5D15347A830059EF9B /* AssetManager.m */; };
+		07E10A55153478950059EF9B /* Asset.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A54153478950059EF9B /* Asset.mm */; };
+		07E10A58153478F80059EF9B /* Block.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A57153478F80059EF9B /* Block.mm */; };
+		07E10A5B153479100059EF9B /* Character.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5A153479100059EF9B /* Character.mm */; };
+		07E10A5E15347A830059EF9B /* AssetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5D15347A830059EF9B /* AssetManager.mm */; };
+		07E10A61153496C80059EF9B /* MainLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A60153496C80059EF9B /* MainLayer.mm */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -127,13 +128,15 @@
 		07E10A4F153324070059EF9B /* EditLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EditLayer.mm; sourceTree = "<group>"; };
 		07E10A51153329A10059EF9B /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blocks.png; sourceTree = "<group>"; };
 		07E10A53153478950059EF9B /* Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Asset.h; path = Asset/Base/Asset.h; sourceTree = "<group>"; };
-		07E10A54153478950059EF9B /* Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Asset.m; path = Asset/Base/Asset.m; sourceTree = "<group>"; };
+		07E10A54153478950059EF9B /* Asset.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Asset.mm; path = Asset/Base/Asset.mm; sourceTree = "<group>"; };
 		07E10A56153478F80059EF9B /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Block.h; path = Asset/Base/Block.h; sourceTree = "<group>"; };
-		07E10A57153478F80059EF9B /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Block.m; path = Asset/Base/Block.m; sourceTree = "<group>"; };
+		07E10A57153478F80059EF9B /* Block.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Block.mm; path = Asset/Base/Block.mm; sourceTree = "<group>"; };
 		07E10A59153479100059EF9B /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = Asset/Base/Character.h; sourceTree = "<group>"; };
-		07E10A5A153479100059EF9B /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Character.m; path = Asset/Base/Character.m; sourceTree = "<group>"; };
+		07E10A5A153479100059EF9B /* Character.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Character.mm; path = Asset/Base/Character.mm; sourceTree = "<group>"; };
 		07E10A5C15347A830059EF9B /* AssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetManager.h; path = Asset/Base/AssetManager.h; sourceTree = "<group>"; };
-		07E10A5D15347A830059EF9B /* AssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetManager.m; path = Asset/Base/AssetManager.m; sourceTree = "<group>"; };
+		07E10A5D15347A830059EF9B /* AssetManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AssetManager.mm; path = Asset/Base/AssetManager.mm; sourceTree = "<group>"; };
+		07E10A5F153496C80059EF9B /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLayer.h; path = Layer/MainLayer.h; sourceTree = "<group>"; };
+		07E10A60153496C80059EF9B /* MainLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainLayer.mm; path = Layer/MainLayer.mm; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 			children = (
 				07E10A4E153324070059EF9B /* EditLayer.h */,
 				07E10A4F153324070059EF9B /* EditLayer.mm */,
+				07E10A5F153496C80059EF9B /* MainLayer.h */,
+				07E10A60153496C80059EF9B /* MainLayer.mm */,
 			);
 			name = Layer;
 			sourceTree = "<group>";
@@ -327,13 +332,13 @@
 			isa = PBXGroup;
 			children = (
 				07E10A53153478950059EF9B /* Asset.h */,
-				07E10A54153478950059EF9B /* Asset.m */,
+				07E10A54153478950059EF9B /* Asset.mm */,
 				07E10A56153478F80059EF9B /* Block.h */,
-				07E10A57153478F80059EF9B /* Block.m */,
+				07E10A57153478F80059EF9B /* Block.mm */,
 				07E10A59153479100059EF9B /* Character.h */,
-				07E10A5A153479100059EF9B /* Character.m */,
+				07E10A5A153479100059EF9B /* Character.mm */,
 				07E10A5C15347A830059EF9B /* AssetManager.h */,
-				07E10A5D15347A830059EF9B /* AssetManager.m */,
+				07E10A5D15347A830059EF9B /* AssetManager.mm */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -606,10 +611,11 @@
 				07E10A4C153320AB0059EF9B /* CCSpringSprite.mm in Sources */,
 				07E10A4D153320AB0059EF9B /* CCWorldLayer.mm in Sources */,
 				07E10A50153324070059EF9B /* EditLayer.mm in Sources */,
-				07E10A55153478950059EF9B /* Asset.m in Sources */,
-				07E10A58153478F80059EF9B /* Block.m in Sources */,
-				07E10A5B153479100059EF9B /* Character.m in Sources */,
-				07E10A5E15347A830059EF9B /* AssetManager.m in Sources */,
+				07E10A55153478950059EF9B /* Asset.mm in Sources */,
+				07E10A58153478F80059EF9B /* Block.mm in Sources */,
+				07E10A5B153479100059EF9B /* Character.mm in Sources */,
+				07E10A5E15347A830059EF9B /* AssetManager.mm in Sources */,
+				07E10A61153496C80059EF9B /* MainLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
