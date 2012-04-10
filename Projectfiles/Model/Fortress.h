@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Fortress : NSObject
+/*
+ FortressはAssetの集合を扱うクラスです。
+ Fortressをエンコードしたりデコードしたりできるようにする予定
+ */
+
+@interface Fortress : NSObject {
+  NSMutableArray* assets_;
+}
+
+@property(readonly) NSArray* assets;
 
 @end
