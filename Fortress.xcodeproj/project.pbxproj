@@ -39,6 +39,7 @@
 		07E10A5B153479100059EF9B /* Character.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5A153479100059EF9B /* Character.mm */; };
 		07E10A5E15347A830059EF9B /* AssetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A5D15347A830059EF9B /* AssetManager.mm */; };
 		07E10A61153496C80059EF9B /* MainLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A60153496C80059EF9B /* MainLayer.mm */; };
+		07E10A641534A6AA0059EF9B /* assets.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A631534A6AA0059EF9B /* assets.lua */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -137,6 +138,7 @@
 		07E10A5D15347A830059EF9B /* AssetManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AssetManager.mm; path = Asset/Base/AssetManager.mm; sourceTree = "<group>"; };
 		07E10A5F153496C80059EF9B /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLayer.h; path = Layer/MainLayer.h; sourceTree = "<group>"; };
 		07E10A60153496C80059EF9B /* MainLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainLayer.mm; path = Layer/MainLayer.mm; sourceTree = "<group>"; };
+		07E10A631534A6AA0059EF9B /* assets.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = assets.lua; path = Data/assets.lua; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -359,6 +361,14 @@
 			path = CCBox2D;
 			sourceTree = "<group>";
 		};
+		07E10A621534A5D90059EF9B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				07E10A631534A6AA0059EF9B /* assets.lua */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		DC193EBE13B6969B00500B56 /* David Gervais Tilesets */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +486,7 @@
 		DCC1A39413A94F1A005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07E10A621534A5D90059EF9B /* Data */,
 				DC193EBE13B6969B00500B56 /* David Gervais Tilesets */,
 				DCC1A39513A94F1A005BD75D /* config.lua */,
 			);
@@ -569,6 +580,7 @@
 				DC193EC113B6969B00500B56 /* Author&License.txt in Resources */,
 				DC193EC313B6969B00500B56 /* dg_grounds32.png in Resources */,
 				07E10A52153329A10059EF9B /* blocks.png in Resources */,
+				07E10A641534A6AA0059EF9B /* assets.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

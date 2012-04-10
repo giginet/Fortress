@@ -9,5 +9,6 @@
 #import "Fortress.h"
 
 @implementation Fortress
+@synthesize assets = assets_;
 
 @end

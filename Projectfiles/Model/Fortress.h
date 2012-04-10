@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "heqet.h"
 
 /*
  FortressはAssetの集合を扱うクラスです。
  Fortressをエンコードしたりデコードしたりできるようにする予定
  */
 
-@interface Fortress : NSObject {
+@interface Fortress : CCNode {
   NSMutableArray* assets_;
 }
 

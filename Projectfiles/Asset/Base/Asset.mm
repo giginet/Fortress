@@ -32,4 +32,7 @@
   return self;
 }
 
+- (void)damage:(int)damage attacker:(CCBodySprite *)attacker {
+}
+
 @end

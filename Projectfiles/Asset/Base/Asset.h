@@ -22,5 +22,6 @@
 @property(readwrite) NSString* name;
 
 - (id)initWithDictionary:(NSDictionary*)info;
+- (void)damage:(int)damage attacker:(CCBodySprite*)attacker;
 
 @end

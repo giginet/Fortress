@@ -7,6 +7,7 @@
 //
 
 #import "MainLayer.h"
+#import "Block.h"
 
 @implementation MainLayer
 
@@ -16,6 +17,7 @@
     self.velocityIterations = 8;
     self.positionIterations = 1;
     self.gravity = ccp(0, -9.8);
+    
   }
   return self;
 }
