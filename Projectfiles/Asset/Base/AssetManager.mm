@@ -28,7 +28,8 @@
 }
 
 - (Asset*)createAssetWithID:(NSString *)assetId {
-  NSDictionary* info = [assetInfo_ objectForKey:assetId];
+  NSMutableDictionary* info = [NSMutableDictionary dictionaryWithDictionary:[assetInfo_ objectForKey:assetId]];
+  [info setObject:assetId forKey:@"assetId"];
   NSString* className = [info objectForKey:@"className"];
   Class cls = NSClassFromString(className);
   return [[cls alloc] initWithDictionary:info];

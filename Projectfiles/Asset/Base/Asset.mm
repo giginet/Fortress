@@ -13,6 +13,7 @@
 @synthesize maxHp;
 @synthesize cost;
 @synthesize name;
+@synthesize assetId;
 
 - (id)init {
   self = [super init];
@@ -39,6 +40,8 @@
     hp = maxHp;
     cost = [[info objectForKey:@"cost"] intValue];
     name = [info objectForKey:@"name"];
+    assetId = [info objectForKey:@"assetId"];
+    [self addBoxWithName:assetId];
   }
   return self;
 }

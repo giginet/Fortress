@@ -25,6 +25,7 @@ enum {
 @property(readonly) int maxHp;
 @property(readonly) int cost;
 @property(readwrite) NSString* name;
+@property(readonly) NSString* assetId;
 
 - (id)initWithDictionary:(NSDictionary*)info;
 - (void)damage:(int)damage attacker:(CCBodySprite*)attacker;

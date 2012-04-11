@@ -21,10 +21,12 @@
     
     Asset* block = [[AssetManager sharedManager] createAssetWithID:@"brick"];
     block.position = ccp(100, 100);
+    block.world = self;
     [self addChild:block];
     
     Asset* shooter = [[AssetManager sharedManager] createAssetWithID:@"shooter"];
     shooter.position = ccp(100, 200);
+    shooter.world = self;
     [self addChild:shooter];
   }
   return self;

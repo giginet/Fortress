@@ -60,7 +60,6 @@
    @return Bullet*
    */
   Bullet* bullet = [self bullet];
-  NSLog(@"%@", bullet);
   bullet.position = self.position;
   bullet.velocity = ccp(self.accelerator, 0);
   [self.parent addChild:bullet];
