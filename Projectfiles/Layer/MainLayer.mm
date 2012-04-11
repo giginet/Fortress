@@ -19,9 +19,13 @@
     self.positionIterations = 1;
     self.gravity = ccp(0, -9.8);
     
-    Asset* block = [[AssetManager sharedManager] createAssetWithID:1];
+    Asset* block = [[AssetManager sharedManager] createAssetWithID:@"brick"];
     block.position = ccp(100, 100);
     [self addChild:block];
+    
+    Asset* shooter = [[AssetManager sharedManager] createAssetWithID:@"shooter"];
+    shooter.position = ccp(100, 200);
+    [self addChild:shooter];
   }
   return self;
 }

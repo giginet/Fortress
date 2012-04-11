@@ -13,6 +13,11 @@
  全て物理演算されます。
 */
 
+enum {
+  kBoxCollisionType = 1,
+  kWallCollisionType = 2
+};
+
 @interface Asset : CCBodySprite {
 }
 

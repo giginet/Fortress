@@ -21,12 +21,17 @@
     maxHp = 0;
     cost = 0;
     name = @"";
+    self.physicsType = kDynamic;
+    self.collisionType = kBoxCollisionType;
+    self.collidesWithType = kBoxCollisionType | kWallCollisionType;
+    float fps = [[KKStartupConfig config] maxFrameRate];
+    [self schedule:@selector(update:) interval:1.0 / fps];
   }
   return self;
 }
 
 - (id)initWithDictionary:(NSDictionary *)info {
-  NSString* filename = [info objectForKey:@"graphic"];
+  NSString* filename = [info objectForKey:@"image"];
   self = [self initWithFile:filename];
   if (self) {
     [self setTexture:[[CCTextureCache sharedTextureCache] addImage:filename]];

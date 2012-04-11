@@ -42,6 +42,10 @@
 		07E10A641534A6AA0059EF9B /* assets.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A631534A6AA0059EF9B /* assets.lua */; };
 		07E10A681534A93E0059EF9B /* brick-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A661534A93E0059EF9B /* brick-hd.png */; };
 		07E10A691534A93E0059EF9B /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A671534A93E0059EF9B /* brick.png */; };
+		07E10A6C153594AF0059EF9B /* Shooter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A6B153594AF0059EF9B /* Shooter.mm */; };
+		07E10A6F153623B10059EF9B /* Bullet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A6E153623B10059EF9B /* Bullet.mm */; };
+		07E10A72153627360059EF9B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A71153627360059EF9B /* bullet.png */; };
+		07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7315362C9F0059EF9B /* bullet-hd.png */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -143,6 +147,12 @@
 		07E10A631534A6AA0059EF9B /* assets.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = assets.lua; path = Data/assets.lua; sourceTree = "<group>"; };
 		07E10A661534A93E0059EF9B /* brick-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brick-hd.png"; sourceTree = "<group>"; };
 		07E10A671534A93E0059EF9B /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
+		07E10A6A153594AF0059EF9B /* Shooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shooter.h; path = Asset/Base/Shooter.h; sourceTree = "<group>"; };
+		07E10A6B153594AF0059EF9B /* Shooter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Shooter.mm; path = Asset/Base/Shooter.mm; sourceTree = "<group>"; };
+		07E10A6D153623B00059EF9B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Weapon/Bullet.h; sourceTree = "<group>"; };
+		07E10A6E153623B10059EF9B /* Bullet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Bullet.mm; path = Weapon/Bullet.mm; sourceTree = "<group>"; };
+		07E10A71153627360059EF9B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		07E10A7315362C9F0059EF9B /* bullet-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet-hd.png"; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -345,6 +355,8 @@
 				07E10A5A153479100059EF9B /* Character.mm */,
 				07E10A5C15347A830059EF9B /* AssetManager.h */,
 				07E10A5D15347A830059EF9B /* AssetManager.mm */,
+				07E10A6A153594AF0059EF9B /* Shooter.h */,
+				07E10A6B153594AF0059EF9B /* Shooter.mm */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -376,10 +388,21 @@
 		07E10A651534A93E0059EF9B /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				07E10A7315362C9F0059EF9B /* bullet-hd.png */,
+				07E10A71153627360059EF9B /* bullet.png */,
 				07E10A661534A93E0059EF9B /* brick-hd.png */,
 				07E10A671534A93E0059EF9B /* brick.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		07E10A70153623B50059EF9B /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				07E10A6D153623B00059EF9B /* Bullet.h */,
+				07E10A6E153623B10059EF9B /* Bullet.mm */,
+			);
+			name = Weapon;
 			sourceTree = "<group>";
 		};
 		DC193EBE13B6969B00500B56 /* David Gervais Tilesets */ = {
@@ -477,6 +500,7 @@
 		DCC1A38C13A94F1A005BD75D /* Projectfiles */ = {
 			isa = PBXGroup;
 			children = (
+				07E10A70153623B50059EF9B /* Weapon */,
 				07DF6C201533196F00D00FCD /* Asset */,
 				07DF6C1C1533191800D00FCD /* Model */,
 				07DF6B88153316B400D00FCD /* Layer */,
@@ -597,6 +621,8 @@
 				07E10A641534A6AA0059EF9B /* assets.lua in Resources */,
 				07E10A681534A93E0059EF9B /* brick-hd.png in Resources */,
 				07E10A691534A93E0059EF9B /* brick.png in Resources */,
+				07E10A72153627360059EF9B /* bullet.png in Resources */,
+				07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +670,8 @@
 				07E10A5B153479100059EF9B /* Character.mm in Sources */,
 				07E10A5E15347A830059EF9B /* AssetManager.mm in Sources */,
 				07E10A61153496C80059EF9B /* MainLayer.mm in Sources */,
+				07E10A6C153594AF0059EF9B /* Shooter.mm in Sources */,
+				07E10A6F153623B10059EF9B /* Bullet.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

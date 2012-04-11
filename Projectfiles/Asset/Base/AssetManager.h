@@ -18,6 +18,6 @@
 }
 
 + (id)sharedManager;
-- (Asset*)createAssetWithID:(NSUInteger)assetId;
+- (Asset*)createAssetWithID:(NSString*)assetId;
 
 @end
