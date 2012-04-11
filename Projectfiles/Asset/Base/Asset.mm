@@ -7,6 +7,7 @@
 //
 
 #import "Asset.h"
+#import "Stage.h"
 
 @implementation Asset
 @synthesize hp;
@@ -29,6 +30,11 @@
     [self schedule:@selector(update:) interval:1.0 / fps];
   }
   return self;
+}
+
+- (void)onEnter {
+  [super onEnter];
+  self.world = [Stage currentStage];
 }
 
 - (id)initWithDictionary:(NSDictionary *)info {

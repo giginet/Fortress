@@ -46,6 +46,7 @@
 		07E10A6F153623B10059EF9B /* Bullet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A6E153623B10059EF9B /* Bullet.mm */; };
 		07E10A72153627360059EF9B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A71153627360059EF9B /* bullet.png */; };
 		07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7315362C9F0059EF9B /* bullet-hd.png */; };
+		07E10A77153630F40059EF9B /* Stage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A76153630F40059EF9B /* Stage.mm */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -153,6 +154,8 @@
 		07E10A6E153623B10059EF9B /* Bullet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Bullet.mm; path = Weapon/Bullet.mm; sourceTree = "<group>"; };
 		07E10A71153627360059EF9B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		07E10A7315362C9F0059EF9B /* bullet-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet-hd.png"; sourceTree = "<group>"; };
+		07E10A75153630F40059EF9B /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = Model/Stage.h; sourceTree = "<group>"; };
+		07E10A76153630F40059EF9B /* Stage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stage.mm; path = Model/Stage.mm; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 			children = (
 				07DF6C1D1533193D00D00FCD /* Fortress.h */,
 				07DF6C1E1533193D00D00FCD /* Fortress.m */,
+				07E10A75153630F40059EF9B /* Stage.h */,
+				07E10A76153630F40059EF9B /* Stage.mm */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -672,6 +677,7 @@
 				07E10A61153496C80059EF9B /* MainLayer.mm in Sources */,
 				07E10A6C153594AF0059EF9B /* Shooter.mm in Sources */,
 				07E10A6F153623B10059EF9B /* Bullet.mm in Sources */,
+				07E10A77153630F40059EF9B /* Stage.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

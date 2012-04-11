@@ -7,27 +7,15 @@
 //
 
 #import "MainLayer.h"
-#import "AssetManager.h"
-#import "Block.h"
+#import "Stage.h"
 
 @implementation MainLayer
 
 - (id)init {
   self = [super init];
   if (self) {
-    self.velocityIterations = 8;
-    self.positionIterations = 1;
-    self.gravity = ccp(0, -9.8);
-    
-    Asset* block = [[AssetManager sharedManager] createAssetWithID:@"brick"];
-    block.position = ccp(100, 100);
-    block.world = self;
-    [self addChild:block];
-    
-    Asset* shooter = [[AssetManager sharedManager] createAssetWithID:@"shooter"];
-    shooter.position = ccp(100, 200);
-    shooter.world = self;
-    [self addChild:shooter];
+    Stage* stage = [Stage node];
+    [self addChild:stage];
   }
   return self;
 }
