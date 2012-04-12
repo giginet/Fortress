@@ -32,6 +32,10 @@ static Stage* currentStage_ = nil;
     block.position = ccp(100, 100);
     [self addChild:block];
     
+    Asset* block2 = [[AssetManager sharedManager] createAssetWithID:@"brick"];
+    block2.position = ccp(400, 110);
+    [self addChild:block2];
+    
     Asset* shooter = [[AssetManager sharedManager] createAssetWithID:@"shooter"];
     shooter.position = ccp(100, 200);
     [self addChild:shooter];

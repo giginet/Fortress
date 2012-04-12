@@ -17,4 +17,11 @@
   return self;
 }
 
+- (void)update:(ccTime)dt {
+  [super update:dt];
+  if(self.position.x < 0 || self.position.y < 0) {
+    [self.parent removeChild:self cleanup:YES];
+  }
+}
+
 @end

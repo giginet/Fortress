@@ -15,4 +15,6 @@
 
 @interface Bullet : CCBodySprite
 
+- (void)update:(ccTime)dt;
+
 @end

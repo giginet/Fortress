@@ -29,5 +29,6 @@ enum {
 
 - (id)initWithDictionary:(NSDictionary*)info;
 - (void)damage:(int)damage attacker:(CCBodySprite*)attacker;
+- (void)update:(ccTime)dt;
 
 @end

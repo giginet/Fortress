@@ -102,4 +102,6 @@ typedef enum
 -(void) onSeparateBody:(CCBodySprite *)sprite;
 -(void) onCollideBody:(CCBodySprite *)sprite withForce:(float)force withFrictionForce:(float)frictionForce;
 
+-(void) update:(ccTime)delta;
+
 @end

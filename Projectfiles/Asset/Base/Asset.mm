@@ -56,4 +56,8 @@
   self.hp -= damage;
 }
 
+- (void)update:(ccTime)dt {
+  [super update:dt];
+}
+
 @end
