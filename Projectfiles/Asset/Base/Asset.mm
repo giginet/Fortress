@@ -58,6 +58,9 @@
 
 - (void)update:(ccTime)dt {
   [super update:dt];
+  if (self.hp <= 0) {
+    [self.parent removeChild:self cleanup:YES];
+  }
 }
 
 @end

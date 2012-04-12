@@ -13,7 +13,7 @@
 - (id)initWithDictionary:(NSDictionary *)info {
   self = [super initWithDictionary:info];
   if (self) {
-    self.physicsType = kStatic;
+    self.physicsType = kKinematic;
   }
   return self;
 }

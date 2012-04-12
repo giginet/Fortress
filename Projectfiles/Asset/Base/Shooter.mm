@@ -62,6 +62,8 @@
   Bullet* bullet = [self bullet];
   bullet.position = self.position;
   bullet.velocity = ccp(self.accelerator, 0);
+  bullet.shooter = self;
+  bullet.world = self.world;
   [self.parent addChild:bullet];
   return bullet;
 }

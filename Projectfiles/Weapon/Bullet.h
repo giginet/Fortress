@@ -7,6 +7,7 @@
 //
 
 #import "CCBodySprite.h"
+#import "Character.h"
 
 /**
  弾の基底クラスです。
@@ -14,6 +15,8 @@
  **/
 
 @interface Bullet : CCBodySprite
+
+@property(readwrite, weak) Character* shooter;
 
 - (void)update:(ccTime)dt;
 
