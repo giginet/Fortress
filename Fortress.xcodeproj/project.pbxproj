@@ -27,7 +27,7 @@
 		07DF6C19153318F500D00FCD /* KWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6C03153318F500D00FCD /* KWUtility.m */; };
 		07DF6C1A153318F500D00FCD /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6C05153318F500D00FCD /* KWVector.m */; };
 		07DF6C1B153318F500D00FCD /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6C07153318F500D00FCD /* NSArrayExtension.m */; };
-		07DF6C1F1533193D00D00FCD /* Fortress.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6C1E1533193D00D00FCD /* Fortress.m */; };
+		07DF6C1F1533193D00D00FCD /* Fortress.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6C1E1533193D00D00FCD /* Fortress.mm */; };
 		07E10A4A153320AB0059EF9B /* CCBodySprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A42153320AB0059EF9B /* CCBodySprite.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07E10A4B153320AB0059EF9B /* CCMotorSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A45153320AB0059EF9B /* CCMotorSprite.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07E10A4C153320AB0059EF9B /* CCSpringSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A47153320AB0059EF9B /* CCSpringSprite.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -48,6 +48,7 @@
 		07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7315362C9F0059EF9B /* bullet-hd.png */; };
 		07E10A77153630F40059EF9B /* Stage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A76153630F40059EF9B /* Stage.mm */; };
 		07E10A7D153692210059EF9B /* test.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7C153692210059EF9B /* test.lua */; };
+		07E10A8015374B300059EF9B /* stage.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7F15374B300059EF9B /* stage.lua */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -123,7 +124,7 @@
 		07DF6C06153318F500D00FCD /* NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExtension.h; sourceTree = "<group>"; };
 		07DF6C07153318F500D00FCD /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
 		07DF6C1D1533193D00D00FCD /* Fortress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fortress.h; path = Model/Fortress.h; sourceTree = "<group>"; };
-		07DF6C1E1533193D00D00FCD /* Fortress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fortress.m; path = Model/Fortress.m; sourceTree = "<group>"; };
+		07DF6C1E1533193D00D00FCD /* Fortress.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Fortress.mm; path = Model/Fortress.mm; sourceTree = "<group>"; };
 		07E10A41153320AB0059EF9B /* CCBodySprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBodySprite.h; sourceTree = "<group>"; };
 		07E10A42153320AB0059EF9B /* CCBodySprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBodySprite.mm; sourceTree = "<group>"; };
 		07E10A43153320AB0059EF9B /* CCBox2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBox2D.h; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		07E10A75153630F40059EF9B /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage.h; path = Model/Stage.h; sourceTree = "<group>"; };
 		07E10A76153630F40059EF9B /* Stage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stage.mm; path = Model/Stage.mm; sourceTree = "<group>"; };
 		07E10A7C153692210059EF9B /* test.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.lua; path = Data/Fortress/test.lua; sourceTree = "<group>"; };
+		07E10A7F15374B300059EF9B /* stage.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stage.lua; path = Data/Stage/stage.lua; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -336,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				07DF6C1D1533193D00D00FCD /* Fortress.h */,
-				07DF6C1E1533193D00D00FCD /* Fortress.m */,
+				07DF6C1E1533193D00D00FCD /* Fortress.mm */,
 				07E10A75153630F40059EF9B /* Stage.h */,
 				07E10A76153630F40059EF9B /* Stage.mm */,
 			);
@@ -387,6 +389,7 @@
 		07E10A621534A5D90059EF9B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				07E10A7E153749AC0059EF9B /* Stage */,
 				07E10A7B1536904C0059EF9B /* Fortress */,
 				07E10A631534A6AA0059EF9B /* assets.lua */,
 			);
@@ -419,6 +422,14 @@
 				07E10A7C153692210059EF9B /* test.lua */,
 			);
 			name = Fortress;
+			sourceTree = "<group>";
+		};
+		07E10A7E153749AC0059EF9B /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				07E10A7F15374B300059EF9B /* stage.lua */,
+			);
+			name = Stage;
 			sourceTree = "<group>";
 		};
 		DC193EBE13B6969B00500B56 /* David Gervais Tilesets */ = {
@@ -640,6 +651,7 @@
 				07E10A72153627360059EF9B /* bullet.png in Resources */,
 				07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */,
 				07E10A7D153692210059EF9B /* test.lua in Resources */,
+				07E10A8015374B300059EF9B /* stage.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,7 +688,7 @@
 				07DF6C19153318F500D00FCD /* KWUtility.m in Sources */,
 				07DF6C1A153318F500D00FCD /* KWVector.m in Sources */,
 				07DF6C1B153318F500D00FCD /* NSArrayExtension.m in Sources */,
-				07DF6C1F1533193D00D00FCD /* Fortress.m in Sources */,
+				07DF6C1F1533193D00D00FCD /* Fortress.mm in Sources */,
 				07E10A4A153320AB0059EF9B /* CCBodySprite.mm in Sources */,
 				07E10A4B153320AB0059EF9B /* CCMotorSprite.mm in Sources */,
 				07E10A4C153320AB0059EF9B /* CCSpringSprite.mm in Sources */,
@@ -733,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */;
 			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */;
 			buildSettings = {
+				GCC_THUMB_SUPPORT = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

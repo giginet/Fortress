@@ -7,11 +7,17 @@
 //
 
 #import "CCWorldLayer.h"
+#import "Fortress.h"
 
 @interface Stage : CCWorldLayer
 
+@property(readwrite) int time;
+@property(readwrite, copy) NSString* title;
+@property(readonly, strong) Fortress* player;
+@property(readonly, strong) Fortress* enemy;
+
 + (Stage*)currentStage;
 
-- (id)initWithFile:(NSString*)filename;
+- (id)initWithID:(NSUInteger)stageId;
 
 @end

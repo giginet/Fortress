@@ -14,7 +14,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    Stage* stage = [[Stage alloc] initWithFile:@"test.lua"];
+    Stage* stage = [[Stage alloc] initWithID:1];
     [self addChild:stage];
   }
   return self;

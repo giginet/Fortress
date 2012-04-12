@@ -65,12 +65,11 @@ local config =
 		WindowFrame = RectMake(1024-640, 768-480, 640, 480),
 		EnableFullScreen = NO,
 	},
-	
 	-- you can create your own config sections using the same mechanism and use KKConfig to access the parameters
 	-- or use the KKConfig injectPropertiesFromKeyPath method
-	MySettings =
-	{
-	},
+        settings = {
+          gravity = -180
+        }
 }
 
 return config

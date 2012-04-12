@@ -15,27 +15,36 @@
 static Stage* currentStage_ = nil;
 
 @implementation Stage
+@synthesize time;
+@synthesize title;
+@synthesize player;
+@synthesize enemy;
 
 + (Stage*)currentStage {
   return currentStage_;
 }
 
-- (id)initWithFile:(NSString *)filename {
+- (id)initWithID:(NSUInteger)stageId {
   self = [super init];
   if (self) {
-    currentStage_ = self;
-    NSDictionary* info = [KKLua loadLuaTableFromFile:filename];
     
+    NSDictionary* stage = [KKLua loadLuaTableFromFile:@"stage.lua"];
+    NSDictionary* info = [stage objectForKey:[NSString stringWithFormat:@"%d", stageId]];
+    
+    [KKConfig selectKeyPath:@"settings"];
+    
+    float gravity = [KKConfig floatForKey:@"gravity"];
+    if ([info objectForKey:@"gravity"]) {
+      gravity = [[info objectForKey:@"gravity"] floatValue];
+    }
+    
+    // Define the simulation accuracy
     self.velocityIterations = 8;
     self.positionIterations = 1;
-    self.gravity = ccp(0, -180.0f);
+    self.gravity = ccp(0.0f, gravity);
     
-    for(NSDictionary* assetInfo in [info allValues]) {
-      NSString* assetId = [assetInfo objectForKey:@"assetId"];
-      int x = [[(NSDictionary*)[assetInfo objectForKey:@"position"] objectForKey:[NSString stringWithFormat:@"%d", 1]] intValue];
-      int y = [[(NSDictionary*)[assetInfo objectForKey:@"position"] objectForKey:[NSString stringWithFormat:@"%d", 2]] intValue];
-      Asset* asset = [[AssetManager sharedManager] createAssetWithID:assetId];
-      asset.position = ccp(x, y);
+    enemy = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
+    for (Asset* asset in enemy.assets) {
       [self addChild:asset];
     }
   }

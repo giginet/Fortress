@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "heqet.h"
+#import "CCBox2D.h"
 
 /*
  FortressはAssetの集合を扱うクラスです。
@@ -18,6 +19,8 @@
   NSMutableArray* assets_;
 }
 
-@property(readonly) NSArray* assets;
+@property(readonly, strong) NSArray* assets;
+
+- (id)initWithFile:(NSString*)filename;
 
 @end
