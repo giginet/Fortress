@@ -12,4 +12,6 @@
 
 + (Stage*)currentStage;
 
+- (id)initWithFile:(NSString*)filename;
+
 @end

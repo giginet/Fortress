@@ -20,25 +20,24 @@ static Stage* currentStage_ = nil;
   return currentStage_;
 }
 
-- (id)init {
+- (id)initWithFile:(NSString *)filename {
   self = [super init];
   if (self) {
     currentStage_ = self;
+    NSDictionary* info = [KKLua loadLuaTableFromFile:filename];
+    
     self.velocityIterations = 8;
     self.positionIterations = 1;
     self.gravity = ccp(0, -180.0f);
     
-    Asset* block = [[AssetManager sharedManager] createAssetWithID:@"brick"];
-    block.position = ccp(100, 100);
-    [self addChild:block];
-    
-    Asset* block2 = [[AssetManager sharedManager] createAssetWithID:@"brick"];
-    block2.position = ccp(400, 110);
-    [self addChild:block2];
-    
-    Asset* shooter = [[AssetManager sharedManager] createAssetWithID:@"shooter"];
-    shooter.position = ccp(100, 200);
-    [self addChild:shooter];
+    for(NSDictionary* assetInfo in [info allValues]) {
+      NSString* assetId = [assetInfo objectForKey:@"assetId"];
+      int x = [[(NSDictionary*)[assetInfo objectForKey:@"position"] objectForKey:[NSString stringWithFormat:@"%d", 1]] intValue];
+      int y = [[(NSDictionary*)[assetInfo objectForKey:@"position"] objectForKey:[NSString stringWithFormat:@"%d", 2]] intValue];
+      Asset* asset = [[AssetManager sharedManager] createAssetWithID:assetId];
+      asset.position = ccp(x, y);
+      [self addChild:asset];
+    }
   }
   return self;
 }
