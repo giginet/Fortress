@@ -14,6 +14,7 @@
   CGPoint lastTouchPoint_;
 }
 
+@property(readwrite) float stageScale;
 @property(readwrite, strong) Stage* stage;
 
 @end
