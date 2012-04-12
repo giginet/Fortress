@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A7111315377B300020B969 /* TitleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A7111215377B300020B969 /* TitleLayer.mm */; };
 		07DF6C08153318F500D00FCD /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDB153318F500D00FCD /* KWMusicManager.m */; };
 		07DF6C09153318F500D00FCD /* tinymt32.c in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDE153318F500D00FCD /* tinymt32.c */; };
 		07DF6C0A153318F500D00FCD /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BE2153318F500D00FCD /* KWLayer.m */; };
@@ -81,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07A7111115377B300020B969 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
+		07A7111215377B300020B969 /* TitleLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TitleLayer.mm; sourceTree = "<group>"; };
 		07DF6BDA153318F500D00FCD /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
 		07DF6BDB153318F500D00FCD /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
 		07DF6BDC153318F500D00FCD /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				07E10A4F153324070059EF9B /* EditLayer.mm */,
 				07E10A5F153496C80059EF9B /* MainLayer.h */,
 				07E10A60153496C80059EF9B /* MainLayer.mm */,
+				07A7111115377B300020B969 /* TitleLayer.h */,
+				07A7111215377B300020B969 /* TitleLayer.mm */,
 			);
 			name = Layer;
 			sourceTree = "<group>";
@@ -702,6 +707,7 @@
 				07E10A6C153594AF0059EF9B /* Shooter.mm in Sources */,
 				07E10A6F153623B10059EF9B /* Bullet.mm in Sources */,
 				07E10A77153630F40059EF9B /* Stage.mm in Sources */,
+				07A7111315377B300020B969 /* TitleLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

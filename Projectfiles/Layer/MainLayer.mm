@@ -71,7 +71,10 @@
   KKInput* input = [KKInput sharedInput];
   input.gesturePinchEnabled = YES;
   if (input.gesturePinchBegan) {
-    stageScale *= 1.0 + ((input.gesturePinchScale - 1.0) / 5.0);
+    if ((input.gesturePinchScale <= 1.0 && stageScale >= input.gesturePinchScale) || 
+        (input.gesturePinchScale >= 1.0 && stageScale <= input.gesturePinchScale)) {
+      stageScale *= 1.0 + ((input.gesturePinchScale - 1.0) / 5.0);
+    }
     CGSize screenSize = [CCDirector sharedDirector].screenSize;
     CGSize stageSize = self.stage.contentSize;
     float minScale = screenSize.width / stageSize.width;
