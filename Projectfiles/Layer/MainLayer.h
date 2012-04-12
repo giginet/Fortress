@@ -7,7 +7,13 @@
 //
 
 #import "heqet.h"
+#import "Stage.h"
 
-@interface MainLayer : CCLayer
+@interface MainLayer : KWLayer {
+  CGPoint scrollPoint_;
+  CGPoint lastTouchPoint_;
+}
+
+@property(readwrite, strong) Stage* stage;
 
 @end

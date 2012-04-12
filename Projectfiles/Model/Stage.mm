@@ -27,6 +27,11 @@ static Stage* currentStage_ = nil;
 - (id)initWithID:(NSUInteger)stageId {
   self = [super init];
   if (self) {
+    CGSize screen = [CCDirector sharedDirector].screenSize;
+    CCLayerColor* bg = [CCLayerColor layerWithColor:ccc4(0, 255, 255, 255) 
+                                              width:screen.width * 2 
+                                             height:screen.height * 2];
+    [self addChild:bg];
     
     NSDictionary* stage = [KKLua loadLuaTableFromFile:@"stage.lua"];
     NSDictionary* info = [stage objectForKey:[NSString stringWithFormat:@"%d", stageId]];
@@ -47,6 +52,7 @@ static Stage* currentStage_ = nil;
     for (Asset* asset in enemy.assets) {
       [self addChild:asset];
     }
+    self.contentSize = CGSizeMake(screen.width * 2, screen.height * 2);
   }
   return self;
 }
