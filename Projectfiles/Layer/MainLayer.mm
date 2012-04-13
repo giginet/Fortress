@@ -48,6 +48,8 @@
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
   lastTouchPoint_ = [self convertTouchToNodeSpace:touch];
+  CGPoint point = [self.stage convertTouchToNodeSpace:touch];
+  [self.stage.player.fortress setTarget:point];
   return YES;
 }
 

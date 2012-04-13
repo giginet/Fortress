@@ -59,9 +59,8 @@
    射出された弾を返します。
    @params CGPoint target
    @return Bullet*
-   */
+  */
   Bullet* bullet = [self bullet];
-  bullet.position = self.position;
   float x = 0, y = 0;
   if (target.x == self.position.x) {
     y = self.accelerator;
@@ -70,7 +69,11 @@
     x = self.accelerator * cos(rad);
     y = self.accelerator * sin(rad);
   }
-  NSLog(@"%f, %f", x, y);
+  int px = (self.contentSize.height + bullet.contentSize.width) / 2;
+  int py = (self.contentSize.height + bullet.contentSize.width) / 2;
+  if (x < 0) px *= -1;
+  if (y < 0) py *= -1;
+  bullet.position = ccpAdd(self.position, ccp(px, py));
   bullet.velocity = ccp(x, y);
   bullet.shooter = self;
   bullet.world = self.world;

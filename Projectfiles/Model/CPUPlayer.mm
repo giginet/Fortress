@@ -10,4 +10,9 @@
 
 @implementation CPUPlayer
 
+- (void)update:(ccTime)dt {
+  CGPoint target = [self enemyPlayer].fortress.center;
+  [self.fortress setTarget:target];
+}
+
 @end

@@ -61,6 +61,21 @@ static Stage* currentStage_ = nil;
     [self addPlayer:enemy];
     
     self.contentSize = CGSizeMake(width, width);
+    
+    // Define the ground box shape.
+    CCBodySprite* wall = [CCBodySprite node];
+    wall.physicsType = kStatic;
+    wall.collisionType = kWallCollisionType;
+    wall.collidesWithType = kBoxCollisionType;
+    [self addChild:wall];
+    CGPoint start = ccp(0, 0);
+    CGPoint end = ccp(self.width, 10);
+    CCArray* bottom = [CCArray arrayWithCapacity:4];
+    [bottom addObject:[NSValue valueWithCGPoint:start]];
+    [bottom addObject:[NSValue valueWithCGPoint:ccp(end.x, start.y)]];
+    [bottom addObject:[NSValue valueWithCGPoint:ccp(end.x, end.y)]];
+    [bottom addObject:[NSValue valueWithCGPoint:ccp(start.x, end.y)]];
+    [wall addPolygonWithName:@"bottom" withVertices:bottom];
   }
   return self;
 }
