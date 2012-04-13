@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		07A7111315377B300020B969 /* TitleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A7111215377B300020B969 /* TitleLayer.mm */; };
 		07A711161537AEDF0020B969 /* Core.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A711151537AEDF0020B969 /* Core.mm */; };
+		07A7111C1537BBF50020B969 /* CPUPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A7111B1537BBF50020B969 /* CPUPlayer.mm */; };
+		07A7111E1537BC0B0020B969 /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A7111D1537BC0B0020B969 /* Player.mm */; };
 		07DF6C08153318F500D00FCD /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDB153318F500D00FCD /* KWMusicManager.m */; };
 		07DF6C09153318F500D00FCD /* tinymt32.c in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDE153318F500D00FCD /* tinymt32.c */; };
 		07DF6C0A153318F500D00FCD /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BE2153318F500D00FCD /* KWLayer.m */; };
@@ -87,6 +89,10 @@
 		07A7111215377B300020B969 /* TitleLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TitleLayer.mm; sourceTree = "<group>"; };
 		07A711141537AEDF0020B969 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Asset/Base/Core.h; sourceTree = "<group>"; };
 		07A711151537AEDF0020B969 /* Core.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Core.mm; path = Asset/Base/Core.mm; sourceTree = "<group>"; };
+		07A711171537BBAA0020B969 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Model/Player.h; sourceTree = "<group>"; };
+		07A7111A1537BBF50020B969 /* CPUPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPUPlayer.h; path = Model/CPUPlayer.h; sourceTree = "<group>"; };
+		07A7111B1537BBF50020B969 /* CPUPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CPUPlayer.mm; path = Model/CPUPlayer.mm; sourceTree = "<group>"; };
+		07A7111D1537BC0B0020B969 /* Player.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Player.mm; path = Model/Player.mm; sourceTree = "<group>"; };
 		07DF6BDA153318F500D00FCD /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
 		07DF6BDB153318F500D00FCD /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
 		07DF6BDC153318F500D00FCD /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
@@ -349,6 +355,10 @@
 				07DF6C1E1533193D00D00FCD /* Fortress.mm */,
 				07E10A75153630F40059EF9B /* Stage.h */,
 				07E10A76153630F40059EF9B /* Stage.mm */,
+				07A711171537BBAA0020B969 /* Player.h */,
+				07A7111D1537BC0B0020B969 /* Player.mm */,
+				07A7111A1537BBF50020B969 /* CPUPlayer.h */,
+				07A7111B1537BBF50020B969 /* CPUPlayer.mm */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -714,6 +724,8 @@
 				07E10A77153630F40059EF9B /* Stage.mm in Sources */,
 				07A7111315377B300020B969 /* TitleLayer.mm in Sources */,
 				07A711161537AEDF0020B969 /* Core.mm in Sources */,
+				07A7111C1537BBF50020B969 /* CPUPlayer.mm in Sources */,
+				07A7111E1537BC0B0020B969 /* Player.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

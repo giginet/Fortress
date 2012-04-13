@@ -15,10 +15,11 @@
  Fortressをエンコードしたりデコードしたりできるようにする予定
  */
 
-@interface Fortress : CCNode {
+@interface Fortress : NSObject {
   NSMutableArray* assets_;
 }
 
+@property(readwrite) CGPoint center;
 @property(readonly, strong) NSArray* assets;
 
 - (id)initWithFile:(NSString*)filename;

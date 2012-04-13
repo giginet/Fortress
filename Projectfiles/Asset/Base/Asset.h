@@ -24,6 +24,7 @@ enum {
 @property(readwrite) int hp;
 @property(readonly) int maxHp;
 @property(readonly) int cost;
+@property(readwrite) CGPoint target;
 @property(readwrite) NSString* name;
 @property(readonly) NSString* assetId;
 

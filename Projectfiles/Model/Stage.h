@@ -7,6 +7,7 @@
 //
 
 #import "CCWorldLayer.h"
+#import "CPUPlayer.h"
 #import "Fortress.h"
 
 @interface Stage : CCWorldLayer
@@ -14,8 +15,8 @@
 @property(readwrite) int time;
 @property(readwrite) float width;
 @property(readwrite, copy) NSString* title;
-@property(readonly, strong) Fortress* player;
-@property(readonly, strong) Fortress* enemy;
+@property(readonly, strong) Player* player;
+@property(readonly, strong) CPUPlayer* enemy;
 
 + (Stage*)currentStage;
 

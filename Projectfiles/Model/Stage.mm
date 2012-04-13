@@ -32,6 +32,7 @@ static Stage* currentStage_ = nil;
 - (id)initWithID:(NSUInteger)stageId {
   self = [super init];
   if (self) {
+    currentStage_ = self;
     CGSize screen = [CCDirector sharedDirector].screenSize;
     
     NSDictionary* stage = [KKLua loadLuaTableFromFile:@"stage.lua"];
@@ -48,14 +49,14 @@ static Stage* currentStage_ = nil;
       width = [[info objectForKey:@"width"] floatValue];
     }
     
-    // Define the simulation accuracy
     self.velocityIterations = 8;
     self.positionIterations = 1;
     self.gravity = ccp(0.0f, gravity);
     
-    enemy = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
-    [self addFortress:enemy player:1];
-
+    Fortress* enemyFortress = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
+    [self addFortress:enemyFortress player:1];
+    enemy = [[CPUPlayer alloc] initWithID:1 fortress:enemyFortress];
+    
     self.contentSize = CGSizeMake(width, width);
   }
   return self;
@@ -71,14 +72,14 @@ static Stage* currentStage_ = nil;
   */
   NSAssert(playerNumber < 2, @"Second argument of addFortress must be less 0 or 1.");
   if (playerNumber == 0) {
-    for (Asset* asset in enemy.assets) {
+    for (Asset* asset in fortress.assets) {
       [self addChild:asset];
     }
   } else {
     [KKConfig selectKeyPath:@"settings"];
     float fortressWidth = [KKConfig floatForKey:@"fortressWidth"];
     float offset = self.width - fortressWidth;
-    for (Asset* asset in enemy.assets) {
+    for (Asset* asset in fortress.assets) {
       float x = offset + fortressWidth - asset.position.x;
       asset.position = ccp(x, asset.position.y);
       [self addChild:asset];

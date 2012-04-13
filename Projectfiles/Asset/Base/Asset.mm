@@ -13,6 +13,7 @@
 @synthesize hp;
 @synthesize maxHp;
 @synthesize cost;
+@synthesize target;
 @synthesize name;
 @synthesize assetId;
 

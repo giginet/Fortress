@@ -47,8 +47,9 @@
 - (void)onInterval:(id)sender {
   /*
    self.intervalごとに実行されます。
-   主に弾を撃ちます。
-   */
+   主に弾を撃ちます
+   @params id sender
+  */
   [self shot:CGPointZero];
 }
 
