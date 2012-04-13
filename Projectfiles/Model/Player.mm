@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "Stage.h"
 
 @implementation Player
 @synthesize playerId;
@@ -22,6 +23,16 @@
 }
 
 - (void)update:(ccTime)dt {
+}
+
+- (Player*)enemyPlayer {
+  NSUInteger enemy = (playerId + 1) % 2;
+  Stage* stage = [Stage currentStage];
+  if (enemy == 0) {
+    return stage.player;
+  } else {
+    return stage.enemy;
+  }
 }
 
 @end

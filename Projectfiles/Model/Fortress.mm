@@ -13,6 +13,7 @@
 
 @implementation Fortress
 @synthesize assets = assets_;
+@synthesize center;
 
 - (id)initWithFile:(NSString *)filename {
   self = [super init];

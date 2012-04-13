@@ -17,5 +17,6 @@
 
 - (id)initWithID:(NSUInteger)playerId fortress:(Fortress*)fortress;
 - (void)update:(ccTime)dt;
+- (Player*)enemyPlayer;
 
 @end

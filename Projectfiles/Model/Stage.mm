@@ -15,7 +15,7 @@
 static Stage* currentStage_ = nil;
 
 @interface Stage()
-- (void)addFortress:(Fortress*)fortress player:(NSUInteger)playerNumber;
+- (void)addPlayer:(Player*)p;
 @end
 
 @implementation Stage
@@ -53,16 +53,19 @@ static Stage* currentStage_ = nil;
     self.positionIterations = 1;
     self.gravity = ccp(0.0f, gravity);
     
+    Fortress* playerFortress = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
     Fortress* enemyFortress = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
-    [self addFortress:enemyFortress player:1];
+    player = [[Player alloc] initWithID:0 fortress:playerFortress];
     enemy = [[CPUPlayer alloc] initWithID:1 fortress:enemyFortress];
+    [self addPlayer:player];
+    [self addPlayer:enemy];
     
     self.contentSize = CGSizeMake(width, width);
   }
   return self;
 }
 
-- (void)addFortress:(Fortress *)fortress player:(NSUInteger)playerNumber {
+- (void)addPlayer:(Player *)p {
   /* 
    砦をステージ上に設置します
    プレイヤー0の場合は左端に、プレイヤー1の場合は右端に反転されて設置されます
@@ -70,15 +73,19 @@ static Stage* currentStage_ = nil;
    @params NSUInteger playerNumber 設置するプレイヤー番号 0 or 1
    @throw プレイヤー番号が0または1以外の時、例外を発生させます
   */
-  NSAssert(playerNumber < 2, @"Second argument of addFortress must be less 0 or 1.");
-  if (playerNumber == 0) {
+  Fortress* fortress = p.fortress;
+  NSUInteger playerId = p.playerId;
+  NSAssert(playerId < 2, @"Second argument of addFortress must be less 0 or 1.");
+  [KKConfig selectKeyPath:@"settings"];
+  float fortressWidth = [KKConfig floatForKey:@"fortressWidth"];
+  if (playerId == 0) {
+    fortress.center = ccp(fortressWidth / 2, fortressWidth / 2);
     for (Asset* asset in fortress.assets) {
       [self addChild:asset];
     }
   } else {
-    [KKConfig selectKeyPath:@"settings"];
-    float fortressWidth = [KKConfig floatForKey:@"fortressWidth"];
     float offset = self.width - fortressWidth;
+    fortress.center = ccp(fortressWidth / 2 + offset, fortressWidth / 2);
     for (Asset* asset in fortress.assets) {
       float x = offset + fortressWidth - asset.position.x;
       asset.position = ccp(x, asset.position.y);
