@@ -50,7 +50,7 @@
    主に弾を撃ちます
    @params id sender
   */
-  [self shot:CGPointZero];
+  [self shot:self.target];
 }
 
 - (Bullet*)shot:(CGPoint)target {
@@ -62,7 +62,16 @@
    */
   Bullet* bullet = [self bullet];
   bullet.position = self.position;
-  bullet.velocity = ccp(self.accelerator, 0);
+  float x = 0, y = 0;
+  if (target.x == self.position.x) {
+    y = self.accelerator;
+  } else {
+    float rad = atan2((target.y - self.position.y), (target.x - self.position.x));
+    x = self.accelerator * cos(rad);
+    y = self.accelerator * sin(rad);
+  }
+  NSLog(@"%f, %f", x, y);
+  bullet.velocity = ccp(x, y);
   bullet.shooter = self;
   bullet.world = self.world;
   [self.parent addChild:bullet];

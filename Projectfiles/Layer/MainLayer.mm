@@ -43,6 +43,7 @@
   [self scaleLayer];
   scrollPoint_ = [self scrollLayer:scrollPoint_];
   self.stage.position = ccpMult(scrollPoint_, -1);
+  [self.stage update:dt];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {

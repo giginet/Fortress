@@ -16,6 +16,7 @@
 @synthesize target;
 @synthesize name;
 @synthesize assetId;
+@synthesize fortress;
 
 - (id)init {
   self = [super init];
@@ -24,6 +25,7 @@
     maxHp = 0;
     cost = 0;
     name = @"";
+    self.density = 1000;
     self.physicsType = kDynamic;
     self.collisionType = kBoxCollisionType;
     self.collidesWithType = kBoxCollisionType | kWallCollisionType;

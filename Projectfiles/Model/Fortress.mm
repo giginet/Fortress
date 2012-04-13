@@ -27,10 +27,17 @@
       int y = [[(NSDictionary*)[assetInfo objectForKey:@"position"] objectForKey:[NSString stringWithFormat:@"%d", 2]] intValue];
       Asset* asset = [[AssetManager sharedManager] createAssetWithID:assetId];
       asset.position = ccp(x, y);
+      asset.fortress = self;
       [assets_ addObject:asset];
     }
   }
   return self;
+}
+
+- (void)setTarget:(CGPoint)target {
+  for (Asset* asset in self.assets) {
+    asset.target = target;
+  }
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CCBodySprite.h"
+#import "Fortress.h"
 
 /* 
  砦に設置するパーツの基底クラスです。
@@ -27,6 +28,7 @@ enum {
 @property(readwrite) CGPoint target;
 @property(readwrite) NSString* name;
 @property(readonly) NSString* assetId;
+@property(readwrite, weak) Fortress* fortress;
 
 - (id)initWithDictionary:(NSDictionary*)info;
 - (void)damage:(int)damage attacker:(CCBodySprite*)attacker;

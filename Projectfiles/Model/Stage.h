@@ -22,4 +22,6 @@
 
 - (id)initWithID:(NSUInteger)stageId;
 
+- (void)update:(ccTime)dt;
+
 @end

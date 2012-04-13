@@ -24,4 +24,6 @@
 
 - (id)initWithFile:(NSString*)filename;
 
+- (void)setTarget:(CGPoint)target;
+
 @end

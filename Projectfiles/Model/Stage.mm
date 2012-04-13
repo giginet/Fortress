@@ -94,4 +94,10 @@ static Stage* currentStage_ = nil;
   }
 }
 
+- (void)update:(ccTime)dt {
+  [super update:dt];
+  [self.player update:dt];
+  [self.enemy update:dt];
+}
+
 @end
