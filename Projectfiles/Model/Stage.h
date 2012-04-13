@@ -12,6 +12,7 @@
 @interface Stage : CCWorldLayer
 
 @property(readwrite) int time;
+@property(readwrite) float width;
 @property(readwrite, copy) NSString* title;
 @property(readonly, strong) Fortress* player;
 @property(readonly, strong) Fortress* enemy;

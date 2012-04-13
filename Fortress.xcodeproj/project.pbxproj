@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07A7111315377B300020B969 /* TitleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A7111215377B300020B969 /* TitleLayer.mm */; };
+		07A711161537AEDF0020B969 /* Core.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07A711151537AEDF0020B969 /* Core.mm */; };
 		07DF6C08153318F500D00FCD /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDB153318F500D00FCD /* KWMusicManager.m */; };
 		07DF6C09153318F500D00FCD /* tinymt32.c in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BDE153318F500D00FCD /* tinymt32.c */; };
 		07DF6C0A153318F500D00FCD /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DF6BE2153318F500D00FCD /* KWLayer.m */; };
@@ -84,6 +85,8 @@
 /* Begin PBXFileReference section */
 		07A7111115377B300020B969 /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
 		07A7111215377B300020B969 /* TitleLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TitleLayer.mm; sourceTree = "<group>"; };
+		07A711141537AEDF0020B969 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Asset/Base/Core.h; sourceTree = "<group>"; };
+		07A711151537AEDF0020B969 /* Core.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Core.mm; path = Asset/Base/Core.mm; sourceTree = "<group>"; };
 		07DF6BDA153318F500D00FCD /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
 		07DF6BDB153318F500D00FCD /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
 		07DF6BDC153318F500D00FCD /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				07E10A5D15347A830059EF9B /* AssetManager.mm */,
 				07E10A6A153594AF0059EF9B /* Shooter.h */,
 				07E10A6B153594AF0059EF9B /* Shooter.mm */,
+				07A711141537AEDF0020B969 /* Core.h */,
+				07A711151537AEDF0020B969 /* Core.mm */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				07E10A6F153623B10059EF9B /* Bullet.mm in Sources */,
 				07E10A77153630F40059EF9B /* Stage.mm in Sources */,
 				07A7111315377B300020B969 /* TitleLayer.mm in Sources */,
+				07A711161537AEDF0020B969 /* Core.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

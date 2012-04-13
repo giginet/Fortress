@@ -21,6 +21,13 @@
 - (id)init {
   self = [super init];
   if (self) {
+    
+    CGSize screen = [CCDirector sharedDirector].screenSize;
+    CCLayerColor* bg = [CCLayerColor layerWithColor:ccc4(0, 255, 255, 255) 
+                                              width:screen.width 
+                                             height:screen.height];
+    [self addChild:bg];
+    
     self.stage = [[Stage alloc] initWithID:1];
     self.stageScale = 1.0;
     scrollPoint_ = CGPointZero;

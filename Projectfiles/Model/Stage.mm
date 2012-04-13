@@ -14,8 +14,13 @@
 
 static Stage* currentStage_ = nil;
 
+@interface Stage()
+- (void)addFortress:(Fortress*)fortress player:(NSUInteger)playerNumber;
+@end
+
 @implementation Stage
 @synthesize time;
+@synthesize width;
 @synthesize title;
 @synthesize player;
 @synthesize enemy;
@@ -28,10 +33,6 @@ static Stage* currentStage_ = nil;
   self = [super init];
   if (self) {
     CGSize screen = [CCDirector sharedDirector].screenSize;
-    CCLayerColor* bg = [CCLayerColor layerWithColor:ccc4(0, 255, 255, 255) 
-                                              width:screen.width * 2 
-                                             height:screen.height * 2];
-    [self addChild:bg];
     
     NSDictionary* stage = [KKLua loadLuaTableFromFile:@"stage.lua"];
     NSDictionary* info = [stage objectForKey:[NSString stringWithFormat:@"%d", stageId]];
@@ -42,6 +43,10 @@ static Stage* currentStage_ = nil;
     if ([info objectForKey:@"gravity"]) {
       gravity = [[info objectForKey:@"gravity"] floatValue];
     }
+    width = screen.width;
+    if ([info objectForKey:@"width"]) {
+      width = [[info objectForKey:@"width"] floatValue];
+    }
     
     // Define the simulation accuracy
     self.velocityIterations = 8;
@@ -49,12 +54,36 @@ static Stage* currentStage_ = nil;
     self.gravity = ccp(0.0f, gravity);
     
     enemy = [[Fortress alloc] initWithFile:[info objectForKey:@"fortress"]];
+    [self addFortress:enemy player:1];
+
+    self.contentSize = CGSizeMake(width, width);
+  }
+  return self;
+}
+
+- (void)addFortress:(Fortress *)fortress player:(NSUInteger)playerNumber {
+  /* 
+   砦をステージ上に設置します
+   プレイヤー0の場合は左端に、プレイヤー1の場合は右端に反転されて設置されます
+   @params Fortress* fortress 設置する砦
+   @params NSUInteger playerNumber 設置するプレイヤー番号 0 or 1
+   @throw プレイヤー番号が0または1以外の時、例外を発生させます
+  */
+  NSAssert(playerNumber < 2, @"Second argument of addFortress must be less 0 or 1.");
+  if (playerNumber == 0) {
     for (Asset* asset in enemy.assets) {
       [self addChild:asset];
     }
-    self.contentSize = CGSizeMake(screen.width * 2, screen.height * 2);
+  } else {
+    [KKConfig selectKeyPath:@"settings"];
+    float fortressWidth = [KKConfig floatForKey:@"fortressWidth"];
+    float offset = self.width - fortressWidth;
+    for (Asset* asset in enemy.assets) {
+      float x = offset + fortressWidth - asset.position.x;
+      asset.position = ccp(x, asset.position.y);
+      [self addChild:asset];
+    }
   }
-  return self;
 }
 
 @end

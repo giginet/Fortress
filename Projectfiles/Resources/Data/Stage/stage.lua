@@ -17,7 +17,7 @@ local stages = {
     fortress = "test.lua",
     time = 90,
     gravity = -320,
-    width = 960
+    width = 800
   }
 }
 

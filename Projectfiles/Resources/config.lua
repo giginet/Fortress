@@ -68,7 +68,8 @@ local config =
 	-- you can create your own config sections using the same mechanism and use KKConfig to access the parameters
 	-- or use the KKConfig injectPropertiesFromKeyPath method
         settings = {
-          gravity = -180
+          gravity = -180,
+          fortressWidth = 300
         }
 }
 

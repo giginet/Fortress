@@ -25,6 +25,15 @@ local assets = {
     interval = 1.0,
     bulletClass = "Bullet",
     bulletImage = "bullet.png"
+  },
+  core = {
+    className = "Core",
+    name = "ふつうのコア",
+    description = "ふつうのコア。壊されたら負けます",
+    density = 0.3,
+    image = "brick.png",
+    cost = 0,
+    hp = 100
   }
 }
 
