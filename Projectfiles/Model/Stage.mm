@@ -104,6 +104,7 @@ static Stage* currentStage_ = nil;
     for (Asset* asset in fortress.assets) {
       float x = offset + fortressWidth - asset.position.x;
       asset.position = ccp(x, asset.position.y);
+      asset.scaleX *= -1;
       [self addChild:asset];
     }
   }

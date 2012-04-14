@@ -53,6 +53,8 @@
 		07E10A77153630F40059EF9B /* Stage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07E10A76153630F40059EF9B /* Stage.mm */; };
 		07E10A7D153692210059EF9B /* test.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7C153692210059EF9B /* test.lua */; };
 		07E10A8015374B300059EF9B /* stage.lua in Resources */ = {isa = PBXBuildFile; fileRef = 07E10A7F15374B300059EF9B /* stage.lua */; };
+		07ED7B38153942200033C0B6 /* zako-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ED7B36153942200033C0B6 /* zako-hd.png */; };
+		07ED7B39153942200033C0B6 /* zako.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ED7B37153942200033C0B6 /* zako.png */; };
 		DC193EB813B692D100500B56 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EB313B6872600500B56 /* GLES-Render.mm */; };
 		DC193EBC13B6956F00500B56 /* ContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC193EBB13B6956F00500B56 /* ContactListener.mm */; };
 		DC193EC113B6969B00500B56 /* Author&License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC193EBF13B6969B00500B56 /* Author&License.txt */; };
@@ -172,6 +174,8 @@
 		07E10A76153630F40059EF9B /* Stage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Stage.mm; path = Model/Stage.mm; sourceTree = "<group>"; };
 		07E10A7C153692210059EF9B /* test.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.lua; path = Data/Fortress/test.lua; sourceTree = "<group>"; };
 		07E10A7F15374B300059EF9B /* stage.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stage.lua; path = Data/Stage/stage.lua; sourceTree = "<group>"; };
+		07ED7B36153942200033C0B6 /* zako-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zako-hd.png"; sourceTree = "<group>"; };
+		07ED7B37153942200033C0B6 /* zako.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zako.png; sourceTree = "<group>"; };
 		DC193EB213B6872600500B56 /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		DC193EB313B6872600500B56 /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		DC193EBA13B6956F00500B56 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListener.h; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 		07E10A651534A93E0059EF9B /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				07ED7B36153942200033C0B6 /* zako-hd.png */,
+				07ED7B37153942200033C0B6 /* zako.png */,
 				07E10A7315362C9F0059EF9B /* bullet-hd.png */,
 				07E10A71153627360059EF9B /* bullet.png */,
 				07E10A661534A93E0059EF9B /* brick-hd.png */,
@@ -672,6 +678,8 @@
 				07E10A7415362C9F0059EF9B /* bullet-hd.png in Resources */,
 				07E10A7D153692210059EF9B /* test.lua in Resources */,
 				07E10A8015374B300059EF9B /* stage.lua in Resources */,
+				07ED7B38153942200033C0B6 /* zako-hd.png in Resources */,
+				07ED7B39153942200033C0B6 /* zako.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
